@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C4213C1-C5A3-4A6D-A369-69B975AA8E6E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChamNet</RootNamespace>
+    <AssemblyName>ChamNet</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.28, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v18.1" />
+    <Reference Include="DevExpress.Data.v18.1" />
+    <Reference Include="DevExpress.Printing.v18.1.Core" />
+    <Reference Include="DevExpress.Utils.v18.1" />
+    <Reference Include="DevExpress.XtraBars.v18.1" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v18.1" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\Bus_ChuyenNganh.cs" />
+    <Compile Include="BUS\Bus_Diem.cs" />
+    <Compile Include="BUS\Bus_Lop.cs" />
+    <Compile Include="BUS\Bus_MonHoc.cs" />
+    <Compile Include="BUS\Bus_NamHoc.cs" />
+    <Compile Include="BUS\Bus_NguoiDung.cs" />
+    <Compile Include="BUS\Bus_RenLuyen.cs" />
+    <Compile Include="BUS\Bus_SinhVien.cs" />
+    <Compile Include="BUS\TangMa.cs" />
+    <Compile Include="DAL\Entity_ChuyenNganh.cs" />
+    <Compile Include="DAL\Entity_Diem.cs" />
+    <Compile Include="DAL\Entity_Lop.cs" />
+    <Compile Include="DAL\Entity_MonHoc.cs" />
+    <Compile Include="DAL\Entity_NamHoc.cs" />
+    <Compile Include="DAL\Entity_NguoiDung.cs" />
+    <Compile Include="DAL\Entity_RenLuyen.cs" />
+    <Compile Include="DAL\Entity_SinhVien.cs" />
+    <Compile Include="DAL\KetNoiCSDL.cs" />
+    <Compile Include="DataSetAll.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAll.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetBCDSSV.cs">
+      <DependentUpon>DataSetBCDSSV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetBCDSSV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetBCDSSV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormBaoCaoDSSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormBaoCaoDSSV.Designer.cs">
+      <DependentUpon>FormBaoCaoDSSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSetDSDiem.cs">
+      <DependentUpon>DataSetDSDiem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSetDSDiem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDSDiem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSetDSSV.cs">
+      <DependentUpon>DataSetDSSV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSetDSSV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDSSV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormBaoCaoDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormBaoCaoDiem.Designer.cs">
+      <DependentUpon>FormBaoCaoDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDiem.Designer.cs">
+      <DependentUpon>FormDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDoiMatKhau.Designer.cs">
+      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormKetNoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormKetNoi.Designer.cs">
+      <DependentUpon>FormKetNoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormLopHoc.Designer.cs">
+      <DependentUpon>FormLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormMonHoc.Designer.cs">
+      <DependentUpon>FormMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormNamHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormNamHoc.Designer.cs">
+      <DependentUpon>FormNamHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormNganh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormNganh.Designer.cs">
+      <DependentUpon>FormNganh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormQlnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormQlnd.Designer.cs">
+      <DependentUpon>FormQlnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormRenLuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormRenLuyen.Designer.cs">
+      <DependentUpon>FormRenLuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSinhVien.Designer.cs">
+      <DependentUpon>FormSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormThongTinPM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormThongTinPM.Designer.cs">
+      <DependentUpon>FormThongTinPM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormTraCuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormTraCuu.Designer.cs">
+      <DependentUpon>FormTraCuu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FormBaoCaoDiem.resx">
+      <DependentUpon>FormBaoCaoDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormBaoCaoDSSV.resx">
+      <DependentUpon>FormBaoCaoDSSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDiem.resx">
+      <DependentUpon>FormDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDoiMatKhau.resx">
+      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormKetNoi.resx">
+      <DependentUpon>FormKetNoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormLopHoc.resx">
+      <DependentUpon>FormLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormMonHoc.resx">
+      <DependentUpon>FormMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormNamHoc.resx">
+      <DependentUpon>FormNamHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormNganh.resx">
+      <DependentUpon>FormNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormQlnd.resx">
+      <DependentUpon>FormQlnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormRenLuyen.resx">
+      <DependentUpon>FormRenLuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSinhVien.resx">
+      <DependentUpon>FormSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormThongTinPM.resx">
+      <DependentUpon>FormThongTinPM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormTraCuu.resx">
+      <DependentUpon>FormTraCuu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\rptDSDiem.rdlc" />
+    <EmbeddedResource Include="Reports\rptDSSV.rdlc" />
+    <None Include="app.config" />
+    <None Include="DataSetAll.xsc">
+      <DependentUpon>DataSetAll.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetAll.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAll.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetAll.xss">
+      <DependentUpon>DataSetAll.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetBCDSSV.xsc">
+      <DependentUpon>DataSetBCDSSV.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetBCDSSV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetBCDSSV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetBCDSSV.xss">
+      <DependentUpon>DataSetBCDSSV.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSetDSDiem.xsc">
+      <DependentUpon>DataSetDSDiem.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSetDSDiem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDSDiem.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSetDSDiem.xss">
+      <DependentUpon>DataSetDSDiem.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSetDSSV.xsc">
+      <DependentUpon>DataSetDSSV.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSetDSSV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDSSV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSetDSSV.xss">
+      <DependentUpon>DataSetDSSV.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1981-52758.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pupils.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tttruonghoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monhoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper_content_pencil_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie_chart_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delicious_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabs_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pupils1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\technorati_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-29181.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dnhap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dien_luc_U.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
