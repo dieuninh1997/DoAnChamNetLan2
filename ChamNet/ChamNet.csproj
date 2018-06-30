@@ -412,10 +412,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="db\QLSV_ninh.mdf">
+    <Content Include="database\QLSV_ninh.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="db\QLSV_ninh_log.ldf">
+    <Content Include="database\QLSV_ninh_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QLSV_ninh.mdf</DependentUpon>
     </Content>
